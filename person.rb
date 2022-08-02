@@ -19,3 +19,6 @@ class Person
   end
   public :can_use_services?
 end
+
+person = Person.new(28, 'happen')
+p person.can_use_services?
