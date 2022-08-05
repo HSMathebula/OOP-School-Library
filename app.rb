@@ -41,4 +41,11 @@ class App
       run
     end
   end
+
+  def run
+    menu
+    answer = gets.chomp.to_i
+    exit if answer == 7
+    option_checker(answer)
+  end
 end
