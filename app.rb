@@ -18,13 +18,15 @@ class App
     puts '3 - Create a person'
     puts '4 - Create a book'
     puts '5 - Create a rental'
-    puts '6 -  List all rentals for a given person id'
+    puts '6 - List all rentals for a given person id'
     puts '7 - Exit'
+    print 'Enter Option: '
   end
 
   def option_checker(answer)
     case answer
     when 1
+      system('cls')
       list_books
     when 2
       list_people
@@ -138,14 +140,18 @@ class App
   end
 
   def list_books
+    puts ''
     puts 'List of all the books in the library:'
+    puts ''
     @books.each do |book|
-      puts "Title: '#{book.title}', Author: '#{book.author}'"
+      puts "Title: #{book.title}"
+      puts "Author: #{book.author}"
     end
     run
   end
 
   def list_people
+    puts ''
     puts 'List of all people:'
     @people.each do |person|
       puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"

@@ -1,6 +1,6 @@
 require_relative 'app'
 def main
-  puts '\n\n'
+  puts ''
   app = App.new
   app.run
 end
