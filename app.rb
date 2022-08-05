@@ -93,16 +93,7 @@ class App
     print 'Name: '
     name = gets.chomp
 
-    print 'Has parent permission? [Y/N]'
-    permission = gets.chomp.upcase
-    case permission
-    when 'Y'
-      permission = true
-    when 'N'
-      permission = false
-    end
-
-    teacher = Teacher.new(age, specialization, name, parent_permission: permission)
+    teacher = Teacher.new(age, specialization, name)
     @people.push(teacher)
     puts 'Teacher created successfully'
   end
