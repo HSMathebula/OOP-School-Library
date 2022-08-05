@@ -48,4 +48,12 @@ class App
     exit if answer == 7
     option_checker(answer)
   end
+
+  def list_books
+    puts 'List of all the books in the library:'
+    @books.each do |book|
+      puts "Title: '#{book.title}', Author: '#{book.author}'"
+    end
+    run
+  end
 end
