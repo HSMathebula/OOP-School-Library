@@ -105,6 +105,17 @@ class App
     puts 'Teacher created successfully'
   end
 
+  def create_book
+    print 'Title: '
+    title = gets.chomp
+    print 'Author: '
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books.push(book)
+    puts 'Book created successfully'
+    run
+  end
+
   def list_books
     puts 'List of all the books in the library:'
     @books.each do |book|
