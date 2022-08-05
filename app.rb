@@ -56,4 +56,12 @@ class App
     end
     run
   end
+
+  def list_people
+    puts 'List of all people:'
+    @people.each do |person|
+      puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
+    run
+  end
 end
