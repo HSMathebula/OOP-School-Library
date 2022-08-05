@@ -49,6 +49,62 @@ class App
     option_checker(answer)
   end
 
+  def create_person
+    puts 'Create a student (1) or a teacher (2)? [Input the number]: '
+    answer = gets.chomp.to_i
+
+    case answer
+    when 1
+      create_student
+    when 2
+      create_teacher
+    end
+
+    run
+  end
+
+  def create_student
+    print 'Age: '
+    age = gets.chomp.to_i
+    print 'Name: '
+    name = gets.chomp
+
+    print 'Has parent permission? [Y/N]'
+    permission = gets.chomp.upcase
+    case permission
+    when 'Y'
+      permission = true
+    when 'N'
+      permission = false
+    end
+
+    student = Student.new(age, nil, name, parent_permission: permission)
+    @people.push(student)
+    puts 'A student created successfully'
+  end
+
+  def create_teacher
+    print 'Age: '
+    age = gets.chomp.to_i
+    print 'Specialization: '
+    specialization = gets.chomp
+    print 'Name: '
+    name = gets.chomp
+
+    print 'Has parent permission? [Y/N]'
+    permission = gets.chomp.upcase
+    case permission
+    when 'Y'
+      permission = true
+    when 'N'
+      permission = false
+    end
+
+    teacher = Teacher.new(age, specialization, name, parent_permission: permission)
+    @people.push(teacher)
+    puts 'Teacher created successfully'
+  end
+
   def list_books
     puts 'List of all the books in the library:'
     @books.each do |book|
