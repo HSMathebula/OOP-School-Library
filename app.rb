@@ -7,6 +7,7 @@ require_relative 'teacher'
 require_relative 'list_book'
 require_relative 'list_people'
 require_relative 'list_rentals'
+
 class App
   attr_reader :people
 
