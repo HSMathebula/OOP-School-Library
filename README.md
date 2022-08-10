@@ -35,6 +35,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@HappenSipho](https://twitter.com/HappenSipho)
 - LinkedIn: [happen-sipho-mathebula](www.linkedin.com/in/happen-sipho-mathebula)
 
+👤 **Felix Odete**
+
+- GitHub: [@felixodette](https://hsmathebula.github.io/felixodette/)
+- Twitter: [@Odette3000](https://twitter.com/Odette3000)
+- LinkedIn: [Felix Odete](www.linkedin.com/in/felixodete)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
