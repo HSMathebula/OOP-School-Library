@@ -10,6 +10,8 @@ def create_book
   book = Book.new(title, author)
   @books.push(book)
   save_book(title, author)
+  book = Book.new(title, author)
+  @books.push(book)
   puts 'Book created successfully'
   run
 end
