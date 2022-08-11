@@ -52,5 +52,28 @@ def save_book(title, author)
   end
 end
 
+def load_people
+  if File.exist?('./data/people.json')
+    file = File.open('./data/people.json')
+    if File.empty?('./data/people.json')
+      puts 'Please add people data if this is your first time visiting our app'
+    else
+      people = JSON.parse(File.read('./data/people.json'))
+      people.each do |person|
+        if person['answer'] == 'Student'
+          student = Student.new(person['age'], person['name'])
+          @people << student
+        else
+          teacher = Teacher.new(person['specialization'], person['age'], person['name'])
+          @people << teacher
+        end
+      end
+    end
+    file.close
+  else
+    puts 'File empty. Please insert some data.'
+  end
+end
+
 
 end
