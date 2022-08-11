@@ -75,5 +75,62 @@ def load_people
   end
 end
 
+def save_student(age, name, parent_permission)
+  obj = {
+    type: 'Student',
+    name: name,
+    age: age,
+    parent_permission: parent_permission
+  }
 
+  if File.exist?('./data/people.json')
+    file = File.open('./data/people.json')
+
+    if file.size.zero?
+      student = [obj]
+    else
+      student = JSON.parse(File.read('./data/people.json'))
+      student << obj
+    end
+
+    file.close
+
+    myfile = File.open('./data/people.json', 'w')
+    myfile.write(JSON.pretty_generate(student))
+    myfile.close
+
+  else
+    puts 'no file'
+  end
+end
+
+def save_teacher(name, age, specialization)
+  obj = {
+    type: 'Teacher',
+    specialization: specialization,
+    name: name,
+    age: age,
+    parent_permission: true
+  }
+
+  if File.exist?('./data/people.json')
+    file = File.open('./data/people.json')
+
+    if file.size.zero?
+      teacher = [obj]
+    else
+      teacher = JSON.parse(File.read('./data/people.json'))
+      teacher << obj
+    end
+
+    file.close
+
+    myfile = File.open('./data/people.json', 'w')
+    myfile.write(JSON.pretty_generate(teacher))
+    myfile.close
+
+  else
+    puts 'no file'
+  end
+end
 end
