@@ -68,7 +68,6 @@ class App
     puts
     load_rentals
   end
-
   def convert_date(str)
     Date.parse(str)
   end
