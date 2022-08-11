@@ -11,7 +11,9 @@ def create_person
     create_student
   when 2
     create_teacher
+  else
+    puts 'that is not valid input number'
+    return
   end
-
   run
 end

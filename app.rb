@@ -7,8 +7,12 @@ require_relative 'teacher'
 require_relative 'list_book'
 require_relative 'list_people'
 require_relative 'list_rentals'
+require_relative 'create_teacher'
+require_relative 'create_student'
+require 'date'
+require_relative './data/preserve_data'
 class App
-  attr_reader :people
+  attr_accessor :people, :rentals, :books
 
   def initialize
     @books = []
@@ -55,5 +59,17 @@ class App
     answer = gets.chomp.to_i
     exit if answer == 7
     option_checker(answer)
+  end
+
+  def load_data
+    load_people
+    puts
+    load_books
+    puts
+    load_rentals
+  end
+
+  def convert_date(str)
+    Date.parse(str)
   end
 end

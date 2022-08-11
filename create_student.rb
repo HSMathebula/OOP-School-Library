@@ -1,5 +1,7 @@
 require_relative 'student'
+require_relative 'person'
 require_relative 'app'
+require './data/preserve_data'
 
 def create_student
   print 'Age: '
@@ -15,7 +17,9 @@ def create_student
     permission = false
   end
 
-  student = Student.new(age, nil, name, parent_permission: permission)
+  student = Student.new(age, name, parent_permission: permission)
+  p student
   @people.push(student)
+  save_student(age, name, permission)
   puts 'A student created successfully'
 end
