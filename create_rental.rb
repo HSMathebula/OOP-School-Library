@@ -20,6 +20,7 @@ def create_rental
 
   rental = Rental.new(date, @books[selected_id_book], @people[selected_id_person])
   @rentals.push(rental)
+  save_rental(date, @books[selected_id_book], @people[selected_id_person])
   puts 'Rental created successfully'
   run
 end
