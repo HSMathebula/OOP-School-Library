@@ -10,5 +10,37 @@
     "name": "juy",
     "age": 52,
     "parent_permission": false
+  },
+  {
+    "type": "Student",
+    "name": "happen",
+    "age": 29,
+    "parent_permission": true
+  },
+  {
+    "type": "Teacher",
+    "specialization": "pop",
+    "name": "name",
+    "age": 55,
+    "parent_permission": true
+  },
+  {
+    "type": "Student",
+    "name": "popo",
+    "age": 23,
+    "parent_permission": true
+  },
+  {
+    "type": "Student",
+    "name": "wewe",
+    "age": 52,
+    "parent_permission": false
+  },
+  {
+    "type": "Teacher",
+    "specialization": "code",
+    "name": "bob",
+    "age": 45,
+    "parent_permission": true
   }
 ]
