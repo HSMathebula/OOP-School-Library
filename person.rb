@@ -1,4 +1,4 @@
-require_relative 'decorate_pattern\nameable'
+require_relative 'decorate_pattern/nameable'
 require_relative 'rental'
 
 class Person < Nameable
