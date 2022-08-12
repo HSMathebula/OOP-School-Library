@@ -1,6 +1,6 @@
-require_relative 'student'
-require_relative 'person'
-require_relative 'app'
+require_relative './student'
+require_relative './person'
+require_relative './app'
 require './data/preserve_data'
 
 def create_student
@@ -18,7 +18,6 @@ def create_student
   end
 
   student = Student.new(age, name, parent_permission: permission)
-  p student
   @people.push(student)
   save_student(age, name, permission)
   puts 'A student created successfully'

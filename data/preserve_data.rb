@@ -64,7 +64,7 @@ def load_people
           student = Student.new(person['age'], person['name'])
           @people << student
         else
-          teacher = Teacher.new(person['specialization'], person['age'], person['name'])
+          teacher = Teacher.new(person['age'], person['specialization'], person['name'])
           @people << teacher
         end
       end
@@ -104,7 +104,7 @@ def save_student(age, name, parent_permission)
   end
 end
 
-def save_teacher(name, age, specialization)
+def save_teacher(age, specialization, name)
   obj = {
     type: 'Teacher',
     specialization: specialization,

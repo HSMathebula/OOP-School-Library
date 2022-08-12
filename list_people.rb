@@ -15,7 +15,7 @@ def list_people
   end
 
   @people.each do |person|
-    puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    puts "ID: #{person.id}, [#{person.class}] Name: #{person.name}, Age: #{person.age}"
   end
   run
 end
